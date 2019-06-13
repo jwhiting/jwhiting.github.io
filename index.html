@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicons thanks to https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,500i|Roboto:300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/57908e1442.js"></script>
+
+    <style type="text/css">
+
+      /* typography */
+      a:link {
+        text-decoration: none;
+        color: #A98B6A;
+      }
+      a:visited {
+        color: #A98B6A;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #A98B6A;
+      }
+      a:active {
+      }
+      a:hover.with-icon {
+        text-decoration: none;
+      }
+      a:hover.with-icon .text {
+        text-decoration: underline;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #555;
+      }
+      h1,h2,h3,h4 {
+        font-family: 'Spectral', serif;
+        font-weight: 200;
+        color: #A98B6A;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      .menu h1 {
+        font-size: 1.1em;
+        letter-spacing: 0.1em;
+      }
+      .menu li {
+        font-size: 0.9em;
+      }
+      .major-content {
+        text-align: justify;
+      }
+      .hero .yetanotherjosh {
+        line-height: 1em;
+        font-size: 30px;
+      }
+      .hero .yetanother {
+        color: black;
+        letter-spacing: 0.2em;
+        font-size: 100%;
+      }
+      .hero .josh {
+        letter-spacing: -0.05em;
+        line-height: 1;
+        font-size: 430%;
+        font-family: 'Spectral', serif;
+        font-style: italic;
+        font-weight: 500;
+        text-shadow: 0px 0px 20px #fff;
+        position: relative;
+        top: 0.0em;
+        left: -0.08em;
+      }
+      .hero .josh .j {
+        letter-spacing: -0.09em;
+      }
+      .hero .tagline {
+        color: #fff7df;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.2;
+        letter-spacing: 0.2em;
+      }
+      .footer {
+        color: #ddd;
+        font-size: 15px;
+        vertical-align: middle;
+      }
+      .footer div {
+        vertical-align: middle;
+      }
+      .footer i {
+        font-size: 25px;
+        position: relative;
+        top: 0.15em;
+        margin: 10px 0;
+      }
+      .footer a:link {
+        color: #d67a4c;
+      }
+      .footer a:visited {
+        color: #d67a4c;
+      }
+      .footer a:hover {
+        color: #d67a4c;
+      }
+
+      /* layout */
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      h1,h2,h3,h4 {
+        margin: 0;
+      }
+      .fixed-bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .main {
+        padding: 30px;
+        padding-top: 0px;
+        max-width: 50em;
+        margin: 0 auto;
+        z-index: 1;
+      }
+      .menu {
+        max-width: 50em;
+        padding: 15px 0;
+        margin: 0 auto;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+      }
+      .menu h1 {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      .menu ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      @media screen and (min-width: 600px) {
+        .major-content.technical ul {
+          columns: 2;
+        }
+      }
+      .menu li {
+        display: inline-block;
+        padding: 0;
+        margin: 0 0 0 10px;
+      }
+      .hero {
+        margin-bottom: 15px;
+      }
+      .hero img {
+        width: 100%;
+      }
+      .hero .yetanotherjosh {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-100%,-50%);
+      }
+      .hero .yetanother {
+      }
+      .hero .josh {
+      }
+      .hero .tagline {
+        margin: 0;
+        padding: 5px;
+      }
+      .major-content {
+        padding: 30px;
+      }
+      .major-content p:last-child {
+        margin-bottom: 0;
+      }
+      .quote {
+        margin: 15px 0 40px 0;
+      }
+      .quote-body {
+        position: relative;
+        margin: 0;
+        padding: 0 30px;
+      }
+      .quote-open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        color: #aaa;
+      }
+      .quote-close {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 20px;
+        color: #aaa;
+      }
+      .quote-source {
+        text-align: right;
+      }
+      .logos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 5px;
+      }
+      .logos img {
+        height: 40px;
+        margin: 0 10px 20px;
+      }
+      .footer {
+        margin: 30px -30px -30px;
+        padding: 0px 30px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      @media screen and (max-width: 800px) {
+        .hero .yetanotherjosh {
+          font-size: 28px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .hero .yetanotherjosh {
+          font-size: 26px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .hero .yetanotherjosh {
+          font-size: 24px;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        .hero .yetanotherjosh {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        .hero .yetanotherjosh {
+          font-size: 18px;
+        }
+      }
+      @media screen and (max-width: 350px) {
+        .hero .yetanotherjosh {
+          font-size: 14px;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        html { padding: 0; }
+        .main { padding: 0; }
+        .major-content { padding: 15px; }
+        .menu {
+          padding: 0 10px;
+          border-bottom: 3px solid #c29255;
+        }
+        .hero {
+          margin: -15px -15px 15px;
+        }
+        .major-content {
+          text-align: left;
+        }
+        .logos {
+          margin-bottom: 0;
+        }
+        .footer {
+          margin: 0;
+        }
+      }
+
+      /* bg colors */
+      html {
+        background-color: #333;
+        /* Background pattern from Toptal Subtle Patterns: */
+        /* https://www.toptal.com/designers/subtlepatterns/dark-sharp-edges/ */
+        background-image: url('footer_lodyas.png');
+        background-repeat: repeat;
+      }
+      .fixed-bg {
+      }
+      .main {
+        background-color: #efefef;
+        box-shadow: 0px 0px 200px rgba(0,0,0,0.6);
+      }
+      .menu {
+      }
+      .hero .tagline {
+        background-color: #c29255;
+      }
+      .menu.scrolled {
+      }
+      .major-content {
+        background-color: #fff;
+      }
+      .major-content:nth-child(odd) {
+        background-color: transparent;
+      }
+      .footer {
+        background-color: #444;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--<div class="fixed-bg"></div>-->
+    <div class="main">
+      <div class="menu">
+        <h1>
+          JOSH WHITING
+        </h1>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/yetanotherjosh/" class="with-icon"><i class="fab fa-linkedin"></i> <span class="text">LinkedIn</span></a>
+          </li>
+          <li>
+            <a href="mailto:yetanotherjosh@gmail.com" class="with-icon"><i class="far fa-envelope"></i> <span class="text">email</a></a>
+          </li>
+        </ul>
+      </div>
+      <div class="major-content about">
+        <div class="hero" style="position:relative">
+          <div style="position:relative">
+          <div style="line-height:0">
+            <img src="jw-portrait.jpg" />
+          </div>
+          <h1 class="yetanotherjosh">
+            <span class="yetanother">YET<br/>ANOTHER<br/></span>
+            <span class="josh"><span class="j">j</span>osh</span>
+          </h1>
+          </div>
+          <p class="tagline">
+            WEB/MOBILE APPLICATION DEVELOPER &amp; CONSULTANT
+          </p>
+        </div>
+        <h2>About</h2>
+        <p>I’m a full-stack internet engineering generalist and entrepreneur
+        with 23 years of professional experience building web applications.
+        I’ve worked extensively at both small-scale startups (through two
+        startup acquisitions) and at large-scale web properties, including
+        Craigslist and Yahoo!. I also have substantial experience in mobile
+        applications and in leading teams.</p>
+        <p>I’m cofounder and CTO of <a
+          href="https://storiumedu.com/">StoriumEdu</a>, a web-based,
+        real-time, collaborative storytelling game that turns students into
+        motivated writers. I work out of my home in Sedona, AZ, and hike daily
+        in this stunning desert landscape.</p> <p>I’m available for remote
+        short- and long-term contract work.  Please <a
+        href="mailto:yetanotherjosh@gmail.com">get in touch</a> if you’d like
+        to discuss working together.</p>
+      </div>
+      <div class="major-content technical">
+        <h2>Technical Specialties</h2>
+        <ul>
+          <li>Full-stack web development</li>
+          <li>Architecture</li>
+          <li>Security</li>
+          <li>Responsive design</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>Ruby / Ruby on Rails</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+          <li>AWS</li>
+          <li>iOS (Objective-C)</li>
+          <li>Angular.js (v1)</li>
+          <li>PHP</li>
+          <li>Perl</li>
+        </ul>
+      </div>
+      <div class="major-content softskills">
+        <h2>Additional Expertise</h2>
+        <p>I also bring to any project the following skills and attitudes:</p>
+        <ul>
+          <li>Bridging communication across teams and concerns. For example:
+            understanding and communicating requirements between the developer
+            domain and product management, design, QA, customer service,
+            operations, and other stakeholders. I tend to be valued for this
+            skill above even my technical abilities, as it is often sorely
+            needed within an organization.</li>
+          <li>An uncompromising approach to application security, born of
+            respect for user privacy and brand trust.</li>
+          <li>Focusing on the success of the project holistically above all
+            else, rejecting “not my problem” mentality. That said, I am willing
+            to very “heads down” when a project warrants it.</li>
+          <li>An uncanny talent for surfacing hidden problems and important
+            edge cases.</li>
+          <li>Management experience, leading teams directly or playing a
+            support role to managers and leads.</li>
+          <li>Strong UX and design sensibilities.</li>
+        </ul>
+      </div>
+      <div class="major-content testimonials">
+        <h2>Testimonials</h2>
+        <div class="quote">
+          <p class="quote-body">
+            <i class="fas fa-quote-left quote-open"></i>
+            Josh is passionate about the well-being of the product; and he
+            cares. Working hard day and night to get things done, Josh has
+            given me a fresh perspective about how an engineer should come to
+            work everyday with a purpose. Josh is technically strong also,
+            which is a nice plus. And I'd love to work with Josh for a long
+            time into the future.
+            <i class="fas fa-quote-right quote-close"></i>
+          </p>
+          <p class="quote-source">&mdash; Nam Nguyen, VP of Engineering, Facebook Platform</p>
+        </div>
+        <div class="quote">
+          <p class="quote-body">
+            <i class="fas fa-quote-left quote-open"></i>
+            This guy is a bad-ass.
+            <i class="fas fa-quote-right quote-close"></i>
+          </p>
+          <p class="quote-source">&mdash; Felipe Oliveira, VP of Engineering, AtScale</p>
+        </div>
+        <div class="quote">
+          <p class="quote-body">
+            <i class="fas fa-quote-left quote-open"></i>
+            With Josh onboard, I know we can build whatever we need,
+            and it will just work.
+            <i class="fas fa-quote-right quote-close"></i>
+          </p>
+          <p class="quote-source">&mdash; Stephen Hood, CEO of StoriumEdu</p>
+        </div>
+      </div>
+      <div class="major-content logos">
+        <img src="craigslist-logo.png"/>
+        <img src="yahoo-logo.png"/>
+        <img src="storiumedu-logo-for-white-bg-351.png"/>
+        <img src="934px-Del.icio.us_old_logo.svg.png"/>
+        <img src="blockboard-logo.png"/>
+        <img src="Klout_logo.svg"/>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="https://www.linkedin.com/in/yetanotherjosh/" class="with-icon"><i class="fab fa-linkedin"></i> <span class="text">LinkedIn</span></a>
+        </div>
+        <div>
+          <a href="mailto:yetanotherjosh@gmail.com" class="with-icon"><i class="far fa-envelope"></i> <span class="text">yetanotherjosh@gmail.com</a></a>
+        </div>
+        <div>
+          <a href="https://www.google.com/search?q=sedona,+az+sunset&tbm=isch" class="with-icon"><i class="fas fa-map-marker-alt"></i> <span class="text">Sedona, AZ</span></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
