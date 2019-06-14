@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" >
     <link href="https://fonts.googleapis.com/css?family=Spectral:200,500i|Roboto:300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/57908e1442.js"></script>
 
@@ -49,7 +49,7 @@
       h1,h2,h3,h4 {
         font-family: 'Spectral', serif;
         font-weight: 200;
-        color: #A98B6A;
+        color: #a48360;
       }
       h2 {
         font-size: 32px;
@@ -88,6 +88,12 @@
       .hero .josh .j {
         letter-spacing: -0.09em;
       }
+.hero .josh {
+  /* 84c2 */
+  text-shadow: 0px 0px 20px rgba(255,255,255,0.3);
+  color: #71410c;
+  color: rgba(113,65,12,0.79);
+}
       .hero .tagline {
         color: #fff7df;
         text-align: center;
@@ -110,13 +116,13 @@
         margin: 10px 0;
       }
       .footer a:link {
-        color: #d67a4c;
+        color: #b09273;
       }
       .footer a:visited {
-        color: #d67a4c;
+        color: #b09273;
       }
       .footer a:hover {
-        color: #d67a4c;
+        color: #b09273;
       }
 
       /* layout */
@@ -169,7 +175,7 @@
         margin: 0 0 0 10px;
       }
       .hero {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
       .hero img {
         width: 100%;
@@ -306,7 +312,7 @@
       .menu {
       }
       .hero .tagline {
-        background-color: #c29255;
+        background-color: #ac7d3e;
       }
       .menu.scrolled {
       }
@@ -334,7 +340,7 @@
             <a href="https://www.linkedin.com/in/yetanotherjosh/" class="with-icon"><i class="fab fa-linkedin"></i> <span class="text">LinkedIn</span></a>
           </li>
           <li>
-            <a href="mailto:yetanotherjosh@gmail.com" class="with-icon"><i class="far fa-envelope"></i> <span class="text">email</a></a>
+            <a href="mailto:yetanotherjosh@gmail.com" class="with-icon"><i class="far fa-envelope"></i> <span class="text">Email</a></a>
           </li>
         </ul>
       </div>
@@ -342,10 +348,12 @@
         <div class="hero" style="position:relative">
           <div style="position:relative">
           <div style="line-height:0">
-            <img src="jw-portrait.jpg" />
+            <img src="jw-portrait-tlaquepaque.jpg"
+                 srcset="jw-portrait-tlaquepaque.jpg, jw-portrait-tlaquepaque@2x.jpg 2x"
+                 alt="Portrait of Josh">
           </div>
           <h1 class="yetanotherjosh">
-            <span class="yetanother">YET<br/>ANOTHER<br/></span>
+            <span class="yetanother">YET<br>ANOTHER<br></span>
             <span class="josh"><span class="j">j</span>osh</span>
           </h1>
           </div>
@@ -428,14 +436,6 @@
         <div class="quote">
           <p class="quote-body">
             <i class="fas fa-quote-left quote-open"></i>
-            This guy is a bad-ass.
-            <i class="fas fa-quote-right quote-close"></i>
-          </p>
-          <p class="quote-source">&mdash; Felipe Oliveira, VP of Engineering, AtScale</p>
-        </div>
-        <div class="quote">
-          <p class="quote-body">
-            <i class="fas fa-quote-left quote-open"></i>
             With Josh onboard, I know we can build whatever we need,
             and it will just work.
             <i class="fas fa-quote-right quote-close"></i>
@@ -444,12 +444,12 @@
         </div>
       </div>
       <div class="major-content logos">
-        <img src="craigslist-logo.png"/>
-        <img src="yahoo-logo.png"/>
-        <img src="storiumedu-logo-for-white-bg-351.png"/>
-        <img src="934px-Del.icio.us_old_logo.svg.png"/>
-        <img src="blockboard-logo.png"/>
-        <img src="Klout_logo.png"/>
+        <img src="craigslist-logo.png" alt="Craigslist logo">
+        <img src="yahoo-logo.png" alt="Yahoo! logo">
+        <img src="storiumedu-logo-for-white-bg-351.png" alt="StoriumEdu logo">
+        <img src="934px-Del.icio.us_old_logo.svg.png" alt="Del.icio.us logo">
+        <img src="blockboard-logo.png" alt="Blockboard logo">
+        <img src="Klout_logo.png" alt="Klout logo">
       </div>
       <div class="footer">
         <div>
